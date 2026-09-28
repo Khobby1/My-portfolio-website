@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emmanuel Seth — Graphic Designer & Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #102a43;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e6eef7;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0b5ed7;
+        }
+
+        .logo span {
+            color: #102a43;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #334e68;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0b5ed7;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 150px 25px 80px;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(66, 153, 225, 0.15), transparent 30%),
+                linear-gradient(135deg, #f7fbff, #ffffff);
+        }
+
+        .hero-container {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .hero-text small {
+            color: #0b5ed7;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(45px, 7vw, 80px);
+            line-height: 1;
+            margin: 15px 0 20px;
+            color: #102a43;
+        }
+
+        .hero-text h1 span {
+            color: #0b5ed7;
+        }
+
+        .hero-text p {
+            max-width: 600px;
+            color: #627d98;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #0b5ed7;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #084298;
+        }
+
+        .btn-outline {
+            border: 2px solid #0b5ed7;
+            color: #0b5ed7;
+        }
+
+        .btn-outline:hover {
+            background: #0b5ed7;
+            color: white;
+        }
+
+        /* =========================
+           PROFILE
+        ========================= */
+
+        .profile-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-card {
+            width: 330px;
+            height: 400px;
+            border-radius: 25px;
+            overflow: hidden;
+            background: #eaf4ff;
+            box-shadow: 0 25px 60px rgba(16, 42, 67, 0.18);
+            transform: rotate(3deg);
+            border: 8px solid white;
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 100px 25px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-heading small {
+            color: #0b5ed7;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            font-size: 42px;
+            color: #102a43;
+            margin-top: 8px;
+        }
+
+        .section-heading p {
+            max-width: 650px;
+            margin: 10px auto 0;
+            color: #627d98;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #f7fbff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #102a43;
+        }
+
+        .about-text p {
+            color: #627d98;
+            margin-bottom: 15px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .skill {
+            background: white;
+            border: 1px solid #d9e7f5;
+            padding: 10px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #0b5ed7;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 30px;
+            border-radius: 18px;
+            background: #f7fbff;
+            border: 1px solid #e0ecf8;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(16, 42, 67, 0.1);
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0b5ed7;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #627d98;
+            font-size: 15px;
+        }
+
+        /* =========================
+           PORTFOLIO
+        ========================= */
+
+        .portfolio {
+            background: #ffffff;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .work-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            background: #edf4fa;
+            cursor: pointer;
+            aspect-ratio: 1 / 1;
+            box-shadow: 0 8px 25px rgba(16, 42, 67, 0.08);
+        }
+
+        .work-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .work-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .work-overlay {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 25px 20px;
+            color: white;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,0.85)
+            );
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .work-card:hover .work-overlay {
+            opacity: 1;
+        }
+
+        .work-overlay h3 {
+            font-size: 19px;
+        }
+
+        .work-overlay p {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #f7fbff;
+        }
+
+        .contact-box {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(16,42,67,0.08);
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #627d98;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            padding: 13px 20px;
+            border-radius: 10px;
+            background: #edf5ff;
+            color: #0b5ed7;
+            font-weight: 700;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 30px 25px;
+            background: #102a43;
+            color: white;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* =========================
+           IMAGE MODAL
+        ========================= */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal img {
+            max-width: 95%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: white;
+            color: #102a43;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .profile-card {
+                width: 280px;
+                height: 340px;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2 {
+                font-size: 34px;
+            }
+
+            .contact-box {
+                padding: 30px 20px;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+    <div class="nav-container">
+
+        <div class="logo">
+            Emmanuel<span>.</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <div class="hero-text">
+
+            <small>Graphic Designer & Web Developer</small>
+
+            <h1>
+                I create
+                <span>designs</span>
+                that speak.
+            </h1>
+
+            <p>
+                I'm Emmanuel Seth, a Ghanaian graphic designer and
+                web developer creating modern visuals, social media
+                designs, brand content and responsive websites.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#portfolio" class="btn btn-primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Let's Work Together
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-wrapper">
+
+            <div class="profile-card">
+
+                <!-- YOUR PROFILE PHOTO -->
+                <img
+                    src="YOUR_PROFILE_IMAGE_HERE"
+                    alt="Emmanuel Seth"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <small>About Me</small>
+
+            <h2>Turning ideas into visuals.</h2>
+
+            <p>
+                I combine creativity and technology to create
+                designs and digital experiences that communicate
+                clearly and look professional.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <h3>Hey, I'm Emmanuel 👋</h3>
+
+                <p>
+                    I am a graphic designer passionate about creating
+                    posters, flyers, social media content, logos and
+                    other digital visuals.
+                </p>
+
+                <p>
+                    I also work with HTML, CSS and JavaScript to create
+                    responsive websites and digital projects.
+                </p>
+
+                <p>
+                    My goal is simple: create work that looks good,
+                    communicates the message and makes people stop
+                    scrolling.
+                </p>
+
+                <div class="skills">
+
+                    <span class="skill">Graphic Design</span>
+                    <span class="skill">Photoshop</span>
+                    <span class="skill">Canva</span>
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Web Design</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <small>What I Do</small>
+
+            <h2>My Services</h2>
+
+            <p>
+                Creative and digital services for individuals,
+                organizations, businesses and brands.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">🎨</div>
+
+                <h3>Graphic Design</h3>
+
+                <p>
+                    Posters, flyers, social media graphics,
+                    event designs and promotional materials.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">✨</div>
+
+                <h3>Brand Design</h3>
+
+                <p>
+                    Logos and visual materials that help brands
+                    establish a clear and professional identity.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">💻</div>
+
+                <h3>Web Design</h3>
+
+                <p>
+                    Responsive websites built with HTML, CSS
+                    and JavaScript.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PORTFOLIO
+========================= -->
+
+<section class="portfolio" id="portfolio">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <small>Selected Work</small>
+
+            <h2>My Portfolio</h2>
+
+            <p>
+                A selection of graphics and creative projects
+                I've worked on.
+            </p>
+
+        </div>
+
+
+        <div class="portfolio-grid">
+
+
+            <!-- 1 -->
+
+            <div class="work-card"
+                 onclick="openImage(this.querySelector('img').src)">
+
+                <img
+                    src="YOUR_IMAGE_01_HERE"
+                    alt="Irene Yeboah Back to School Design"
+                >
+
+                <div class="work-overlay">
+
+                    <h3>Back to School</h3>
+
+                    <p>
+                        Promotional campaign design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2 -->
+
+            <div class="work-card"
+                 onclick="openImage(this.querySelector('img').src)">
+
+                <img
+                    src="YOUR_IMAGE_02_HERE"
+                    alt="Linda Adams Special Food Design"
+                >
+
+                <div class="work-overlay">
+
+                    <h3>Linda Adams</h3>
+
+                    <p>
+                        Food promotional design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3 -->
+
+            <div class="work-card"
+                 onclick="openImage(this.querySelector('img').src)">
+
+                <img
+                    src="YOUR_IMAGE_03_HERE"
+                    alt="LSU Sports 2025"
+                >
+
+                <div class="work-overlay">
+
+                    <h3>LSU Sports 2025</h3>
+
+                    <p>
+                        Sports event campaign
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 4 -->
+
+            <div class="work-card"
+                 onclick="openImage(this.querySelector('img').src)">
+
+                <img
+                    src="YOUR_IMAGE_04_HERE"
+                    alt="Esbar Coming Soon"
+                >
+
+                <div class="work-overlay">
+
+                    <h3>Esbar Kitchen</h3>
+
+                    <p>
+                        Restaurant launch design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 5 -->
+
+            <div class="work-card"
+                 onclick="openImage(this.querySelector('img').src)">
+
+                <img
+                    src="YOUR_IMAGE_05_HERE"
+                    alt="Culinary Justice"
+                >
+
+                <div class="work-overlay">
+
+                    <h3>Culinary Justice</h3>
+
+                    <p>
+                        Event promotional design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 6 -->
+
+            <div class="work-card"
+                 onclick="openImage(this.querySelector('img').src)">
+
+                <img
+                    src="YOUR_IMAGE_06_HERE"
+                    alt="Semester Roadmap"
+                >
+
+                <div class="work-overlay">
+
+                    <h3>Semester Roadmap</h3>
+
+                    <p>
+                        Academic information design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 7 -->
+
+            <div class="work-card"
+                 onclick="openImage(this.querySelector('img').src)">
+
+                <img
+                    src="YOUR_IMAGE_07_HERE"
+                    alt="Adom MMA"
+                >
+
+                <div class="work-overlay">
+
+                    <h3>Adom MMA</h3>
+
+                    <p>
+                        Fundraising campaign design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 8 -->
+
+            <div class="work-card"
+                 onclick="openImage(this.querySelector('img').src)">
+
+                <img
+                    src="YOUR_IMAGE_08_HERE"
+                    alt="Miss Central Pride"
+                >
+
+                <div class="work-overlay">
+
+                    <h3>Miss Central Pride</h3>
+
+                    <p>
+                        Event campaign design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>Let's create something 🔥</h2>
+
+            <p>
+                Need a flyer, poster, social media design,
+                logo or website? Let's work together.
+            </p>
+
+            <div class="contact-details">
+
+                <a
+                    class="contact-item"
+                    href="mailto:YOUR_EMAIL_HERE"
+                >
+                    📧 Email Me
+                </a>
+
+                <a
+                    class="contact-item"
+                    href="https://wa.me/YOUR_NUMBER_HERE"
+                >
+                    💬 WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 Emmanuel Seth. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     IMAGE MODAL
+========================= -->
+
+<div class="modal" id="imageModal">
+
+    <button
+        class="close-modal"
+        onclick="closeImage()"
+    >
+        ×
+    </button>
+
+    <img
+        id="modalImage"
+        src=""
+        alt="Portfolio preview"
+    >
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    function openImage(src) {
+
+        const modal =
+            document.getElementById("imageModal");
+
+        const image =
+            document.getElementById("modalImage");
+
+        image.src = src;
+
+        modal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+    }
+
+
+    function closeImage() {
+
+        const modal =
+            document.getElementById("imageModal");
+
+        modal.classList.remove("active");
+
+        document.body.style.overflow = "";
+    }
+
+
+    document
+        .getElementById("imageModal")
+        .addEventListener("click", function(event) {
+
+            if (event.target === this) {
+
+                closeImage();
+
+            }
+
+        });
+
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "Escape") {
+
+            closeImage();
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
